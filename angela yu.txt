@@ -1,0 +1,84 @@
+cd c:  windows only d:
+whoami
+hostname
+uname
+uname -a
+clear
+pwd      present wroking directore
+ls
+ls -l
+ls -a    hidden files
+date
+//cal      calander
+cd       change directore
+touch    text file   windows  echo.> o.html
+rm 	 remove
+nano     text editor
+^ carate sign mins ctrl
+cat      file open   windows start
+//code .	 vs code
+
+mkdir	 create drictore
+cp	 copy
+mv	 move
+rm -r	 directory remove
+cd..
+//man      manual such that man ls   windows help
+q	 exit man
+help
+locate	 hol pc serche
+
+if space any file or directory use 'jdj' 
+
+find	 own directore
+curl	 https://google.come
+file	 find its it file or folder/directore
+history
+env	 enviroment variable
+df	 how much disk free
+su	 root user
+
+reboot
+shutdown now
+
+
+angela yu
+
+
+alt + click
+ctrl + a
+ctrl + e
+ctrl + u   clear comand linewhoami
+
+ls 	 list
+cd doc + tab
+cd
+ ~ 	root 
+up arrow or down arrow previous command histore
+cd space ..	back 1 label
+
+
+c:windows/system32
+
+diskpart
+list disk
+select disk  0/1/etc
+clean
+convert gpt
+
+
+diskpart
+list disk
+select disk 1/0/etc
+create partition primary size=10240
+assign letter=R
+
+diskpart
+list disk
+select disk 0/1/etc
+list volume
+select volume 0/1/etc
+remove letter=R
+
+
+manage-bde -lock -ForceDismount F:

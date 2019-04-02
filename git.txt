@@ -1,0 +1,53 @@
+git config --global user.name "kasmacilo"
+git config --global user.email kasmacilo@gmail.com
+                          password:   jniufuKJDJNKD25594
+cd Desktop/git_exercise/
+git init
+
+touch hello.txt
+
+git add hello.txt
+git add -A
+it add .
+
+git status
+
+git commit -m "Initial commit."
+
+git log
+git log --oneline
+
+git show   161565f55  ----comit message number
+
+
+git diff hello.txt
+git diff --staged
+git diff dg2255 gh52275
+
+git checkout hello.txt
+git checkout dg2255 hello.txt
+
+git rm hello.txt
+git reset HEAD hello.txt
+
+
+
+   on line
+
+
+git clone https://github.com/kasmacilo/story.git
+git clone https://github.com/kasmacilo/story.git myprojects
+git remote add origin https://github.com/kasmacilo/story.git
+git push origin master
+code .
+ctrl +shift +p =command plate
+
+
+
+git branch
+git branch amazing_new_feature
+git checkout amazing_new_feature
+
+git checkout master
+git merge amazing_new_feature (accepte incoming change)
+git checkout -b anatherbranche

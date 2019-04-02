@@ -1,0 +1,30 @@
+i = vim insert mode that means you write something.
+
+Esc = 
+:wq = your writing file save && quit.
+
+:q = quit
+:help
+
+:help x
+
+
+:w =save vim all write but donot close vim
+h=right
+l=left
+j=under
+k=up
+shift + $ = line last
+shift + v =full line select
+y =young = copy
+p =paste
+dd=delete line (which line stay mouse cursor)
+diw = delete insert word
+shift +zz =your writing file save && quit.
+shift + G (capital G) =file line last
+gg = file line first
+:PlugInstall
+ctrl +n
+m new file
+ctrl +w tree view
+:sh
