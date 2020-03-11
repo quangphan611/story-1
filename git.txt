@@ -1,6 +1,6 @@
 git config --global user.name "kasmacilo"
 git config --global user.email kasmacilo@gmail.com
-                          password:   jniufuKJDJNKD25594
+                          password:
 cd Desktop/git_exercise/
 git init
 
