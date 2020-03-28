@@ -1,0 +1,100 @@
+ping google.com (exit google use command ctrl+c)
+fdisk -l
+cfdisk
+dos
+enter new disk size (10G) primary bootable write yes
+go to free space enter new disk size 2048m primary write yes
+quite
+ clear
+fdisk -l
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda3 (if sda3 has)
+mkswap /dev/sda2
+swapon /dev/sda2
+mount /dev/sda1 /mnt
+mkdir /mnt/home
+mount /dev/sda3 /mnt/home
+clear
+pacstrap /mnt base base-devel (its downlod 200 over application)
+clear
+genfstab /mnt>> /mnt/etc/fstab
+cat /mnt/etc/fstab
+clear
+arch-chroot /mnt /bin/bash
+pacman -S nano
+nano /etc/locale.gen  (#en_us.UTF-8 UTF-8 chose this file and remove # )
+ctrl x y enter exit nano
+locale-gen
+clear
+nano /etc/locale.conf
+LANG=en_US.UTF-8
+ls /usr/share/zoneinfo
+ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime (its not wor kto change ln -s /usr.....localetime)
+hwclock --systohc --utc
+clear
+passwd
+nano /etc/hostname
+rashedkhan
+systemctl enable dhcpcd
+clear
+pacman -s linux
+pacman -S grub os-prober
+clear
+grub-install /dev/sda (its not work grub-install --target=i386-pc /dev/sda)
+grub-mkconfig -o /boot/grub/grub.cfg
+umount /mnt (its not work umount -R /mnt not work to exit)
+reboot
+boot existing os
+
+
+arch login:
+root
+password:
+aim
+pacman -Sy openssh
+systemctl start sshd
+systemctl status sshd
+useradd -m -G wheel rashedkhan
+passwd rashedkhan
+su
+EDITOR=nano visudo
+
+exit root
+sudo pacman -Syu
+
+
+sudo pacman -S xorg-server 
+sudo pacman -S gdm
+sudo systemctl enable gdm
+sudo pacman -S gnome gnome-extra
+reboot
+pacman -S xf86-video-vesa
+pacman -S xterm
+pacman -S ttf-dejavu ttf-droid ttf-inconsolata
+
+
+pacman -Syu
+
+
+
+
+vim firefox network-manager-applet git xdg-user-dirs gvfs ntfs-3g
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
