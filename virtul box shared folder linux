@@ -1,0 +1,81 @@
+1. You need to install guest additions for your guest system.
+2. Create a shared folder between your host to your guest systems.
+3. Change the user permission for a shared folder - so you can access the shared files from your guest system without root privileges.
+
+After these steps all files created in this shared folder will be  available in both the host and the guest systems.
+
+
+1:06 Arch Linux guest system
+
+Make sure your Arch Linux guest system is up to date:
+sudo pacman -Syu
+
+Install linux headers:
+sudo pacman -S linux-lts-headers
+or
+sudo pacman -S linux-headers
+
+Install virtualbox-guest-utils:
+sudo pacman -S virtualbox-guest-utils
+
+for linux kernel choose virtualbox-guest-modules-arch
+for other kernels choose virtualbox-guest-dkms
+
+Load the Virtualbox kernel modules:
+sudo systemctl enable vboxservice
+
+Then add a shared folder. Reboot.
+
+Add your user to the vboxsf group and give that user a permission to access the media folder:
+sudo usermod -a -G vboxsf yourusername
+sudo chown -R yourusername:users /media/
+
+Log out, log in.
+
+
+3:02 Debian guest system
+
+(Please, use this way for any other distro. It's a more universal way.)
+
+Make sure these packages are installed:
+sudo apt install build-essential dkms linux-headers-$(uname -r)
+
+Then add a shared folder. Reboot.
+
+Insert Guest addition image and install VBoxLinuxAdditions:
+sudo sh VBoxLinuxAdditions.run
+
+Reboot.
+
+Add your user to the vboxsf group:
+sudo usermod -a -G vboxsf yourusername 
+
+And change the permission of the media folder:
+sudo chown -R yourusername:users /media/
+
+Log out, log in.
+
+4:39 Linux Mint / Ubuntu guest system
+
+Open the software manager and install 
+virtualbox-guest-X11
+virtualbox-guest-utils
+virtualbox-guest-dkms
+
+Add a shared folder.
+
+Reboot.
+
+Then add your user to the vboxsf group.
+
+sudo usermod -a -G vboxsf alu 
+
+Change the permission.
+
+sudo chown -R alu:users /media/
+
+Log out, log in.
+
+
+Now you can use a shared folder to move files between your host and guest systems.
+
