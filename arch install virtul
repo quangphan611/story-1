@@ -71,7 +71,7 @@ reboot
 pacman -S xf86-video-vesa
 pacman -S xterm
 pacman -S ttf-dejavu ttf-droid ttf-inconsolata
-
+pacman -S firefox
 
 pacman -Syu
 
